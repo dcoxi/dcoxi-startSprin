@@ -1,18 +1,18 @@
 package api.startspring.services;
 
-import api.startspring.data.model.entity.Pessoa;
+import api.startspring.data.vo.PessoaVO;
 
 import java.util.List;
 
 public interface IPesseoaService {
 
-    Pessoa novo(Pessoa pessoa);
+    PessoaVO novo(PessoaVO pessoa);
 
-    List<Pessoa> todos();
+    List<PessoaVO> todos();
 
-    Pessoa buscarPorId(Long id);
+    PessoaVO buscarPorId(Long id);
 
-    Pessoa actualizar(Pessoa pessoa);
+    PessoaVO actualizar(PessoaVO pessoa);
 
     void apagar(Long id);
 
