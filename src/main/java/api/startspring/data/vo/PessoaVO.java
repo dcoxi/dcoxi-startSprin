@@ -1,19 +1,26 @@
 package api.startspring.data.vo;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
 import lombok.Getter;
 import lombok.Setter;
 import java.io.Serializable;
 
+@JsonPropertyOrder({"id","nome","sobreNome","genero","endereco"})
 public class PessoaVO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+
     @Getter @Setter
     private Long id;
-
+    @JsonProperty("primeiro_nome")
     @Getter @Setter
     private String nome;
 
+    @JsonProperty("ulimo_nome")
     @Getter @Setter
     private String sobreNome;
 
@@ -21,6 +28,7 @@ public class PessoaVO implements Serializable {
     @Getter @Setter
     private String endereco;
 
+    @JsonIgnore
     @Getter @Setter
     private String genero;
 
